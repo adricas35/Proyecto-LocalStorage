@@ -1,0 +1,115 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo general del body */
+body {
+    background: linear-gradient(70deg, blue, rgb(93, 233, 137));
+    padding: 20px;
+    color: #333;
+
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0d1116;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3),
+        -1px -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario */
+form#formulario-curso {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgb(135, 206, 250);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2),
+        -8px -8px 15px rgba(255, 255, 255, 0.4);
+    border: 2px solid #27ae60;
+}
+
+form#formulario-curso input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px rgba(255, 255, 255, 0.4);
+    outline: none;
+}
+
+form#formulario-curso button {
+    width: 100%;
+    padding: 10px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2),
+        -6px -6px 10px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+form#formulario-curso button:hover {
+    background-color: #219150;
+    transform: translateY(2px);
+}
+
+/* Mensaje del curso */
+#mensaje-curso {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 18px;
+    color: #0a0d0e;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3),
+        -1px -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón de borrar */
+#btn-borrar {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2),
+        -6px -6px 10px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#btn-borrar:hover {
+    background-color: #a93226;
+    transform: translateY(2px);
+}
+
+/* Enlace */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #05080a;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3),
+        -1px -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+    text-decoration: underline;
+
+}
