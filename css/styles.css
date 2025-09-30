@@ -113,3 +113,24 @@ a:hover {
     text-decoration: underline;
 
 }
+
+#tabla-cursos{
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+#tabla-cursos tr{
+    border: solid 1px red;
+}
+
+#tabla-cursos thead {
+    background: #bd1616;
+
+}
+
+#tabla-cursos thead td{
+    padding: 10px;
+}
+
+

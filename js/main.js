@@ -79,28 +79,3 @@ borrar.addEventListener('click', ()=>{
     // Se muestra un mensaje indicando que el curso fue eliminado
     mensajeCurso.textContent = 'Curso eliminado';
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// document.addEventListener('DOMContentLoaded', () =>{
-//     usuarioCreado = localStorage.getItem('usuario');
-    
-// });
-
-
-
-
-
-
-

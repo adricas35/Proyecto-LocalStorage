@@ -26,8 +26,10 @@ form.addEventListener("submit", (e) => {
         alert('Ingrese todos los datos ');
         return;
     }
+
 // En este ejercicio se construye un objeto con caracteristicas con sus diferentes claves y valores
-    const newCurso ={
+   
+const newCurso ={
         nombre: curso,
         profesor: profesor,
         precio: precio,
@@ -36,68 +38,42 @@ form.addEventListener("submit", (e) => {
     }
 
 
+// Capturamos el arreglo existente en el Local Satorage o lo creamos vacio o lo creamos vacio sino existe
+const cursosGuardados= JSON.parse(localStorage.getItem('cursos')) ||[];
 
-    localStorage.setItem('curso', JSON.stringify(newCurso));
+// AGREGAMOS a l arreglo [] el curso {} agregamos al arreglo cursos guardados el nuevo curso
+cursosGuardados.push(newCurso);
+
+    // Se guarda el objeto en el localStorage como un string JSON
+    localStorage.setItem('cursos', JSON.stringify(cursosGuardados));
 
     form.reset();
 
 });
 
 
-document.addEventListener('DOMContentLoaded', ()=>{
-    const cursoCreado= localStorage.getItem('curso');
-// 
-    if (cursoCreado) {
-        const objetoCurso= JSON.parse(cursoCreado);
-        mensajeCurso.innerHTML = ' curso: ' + objetoCurso.nombre +' profesor: ' + objetoCurso.profesor + ' precio: '+ objetoCurso.precio + ' ciudad: ' + objetoCurso.ciudad + ' cupo: ' + objetoCurso.cupo;
-    }
 
-});
+
+document.addEventListener('DOMContentLoaded', ()=>{
+const cursoCreado= localStorage.getItem('curso');
+
+
+    if (cursoCreado) {
+    const objetoCurso= JSON.parse(cursoCreado);
+    mensajeCurso.innerHTML = ' curso: ' + objetoCurso.nombre +' profesor: ' + objetoCurso.profesor + ' precio: '+ objetoCurso.precio + ' ciudad: ' + objetoCurso.ciudad + ' cupo: ' + objetoCurso.cupo;
+    }
+ });
 
 borrar.addEventListener('click', ()=>{
-    localStorage.removeItem('curso');
-    mensajeCurso.textContent = 'Aquí se mostrará el curso creado';
-})
+localStorage.removeItem('cursos');
+mensajeCurso.textContent = 'Curso eliminado';
+ });
 
 
 
-
-
-
-
-
-
-
-
-
-    // mensajeCurso.textContent = 'Aqui se mostrara el curso creado: ' + newCurso;
-
-    // input.value='';
-
-// document.addEventListener('DOMContentLoaded', () => {
-
-//     const usuarioGuardado = localStorage.getItem('usuario');
-
-//     if (usuarioGuardado) {
-//         saludo.textContent = 'Bienvenido de nuevo: ' + usuarioGuardado;
-//     }
-
-// });
-
-
-  
-// borrar.addEventListener('click', () => {
-//     localStorage.removeItem('usuario');
-//     saludo.textContent = 'Bienvenido usuario indefinido';
-
-// });
-
-
-
-// document.addEventListener('DOMContentLoaded', () =>{
-//     usuarioCreado = localStorage.getItem('usuario');
     
-// });
+
+
 
 
 
